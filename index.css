@@ -1,0 +1,136 @@
+:root {
+  /* primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding : 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.attribution{
+  margin : 2rem;
+}
+
+body {
+  background-color: var(--cream);
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4{
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.825rem;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+h1{
+  font-family: 'Fraunces', serif;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--very-dark-blue)
+}
+
+p{
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+  
+}
+
+img {
+  max-width: 100%;
+}
+
+.container{
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 650px;
+  margin: auto;
+}
+
+.container .content {
+  padding:1.5rem;
+}
+
+.content h1 + p {
+  margin-bottom: 1rem;
+}
+
+.price > p:first-child {
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+}
+
+.price > p:last-child {
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-cyan);
+  border: none;
+  color: var(--White);
+  padding: 1rem 0;
+  width: 100%;
+  gap: 0.5rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: hsl(158, 35%, 19%);
+}
+
+
+@media (min-width: 720px) {
+
+  img {
+    height: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container .content {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+
+  .content h1 {
+    margin: 1rem 0 2rem;
+  }
+
+  .content .price {
+    margin: 1rem 0 2rem;
+  }
+}
+
